@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import os as os
 
-file = 'input.txt'
+file = 'day1/input.txt'
 
 report= {}
 
@@ -19,6 +19,8 @@ if __name__=="__main__":
 
     keys = list(map(int,report.keys()))
 
+    # in a similar fashion to what we did before we can create a dictionary 
+    # of the dual values and take the complexity from o(n^3) to o(n^2) but sacrfice o(n^2) of memeory
     for i in range(len(keys)):
         for j in range(i,len(keys)):
            for k in range(j,len(keys)):
